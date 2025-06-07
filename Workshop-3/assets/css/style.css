@@ -1,0 +1,90 @@
+:root {
+    --primary-text-color: #000;
+    --secondary-text-color: #11b494;
+}
+
+body {
+    font-family: "Merriweather", serif !important;
+}
+
+.main__hero {
+    display: flex;
+    align-items: end;
+    height: 100vh;
+}
+
+.main__hero-childs {
+    height: 95%;
+}
+
+.main__hero-right-item img {
+    padding: 0 10px 10px 0;
+}
+
+.main__hero-right-item h3 {
+    font-size: 0.875rem;
+}
+
+.main__hero-right-title {
+    max-width: 300px;
+    color: var(--secondary-text-color);
+    padding: 43px 0 10px 0;
+    border-bottom: solid 3px var(--secondary-text-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.main__hero a {
+    color: var(--primary-text-color);
+}
+
+.main__hero a:hover {
+    color: var(--secondary-text-color);
+}
+
+/* @media (max-width: 768px) {
+    .main__hero {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .main__hero-childs {
+        height: auto;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .main__hero-right-title {
+        width: 100%;
+        text-align: center;
+        font-size: 1.25rem;
+    }
+
+    .main__hero-right-item {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+
+
+    .main__hero-right-item h3 {
+        font-size: 0.9rem;
+    }
+
+} */
+
+
+@media (max-width: 768px) {
+    .main__hero {
+        align-items: start;
+        height: auto;
+    }
+    
+    .main__hero-childs {
+        height: auto;
+    }
+
+    
+}
