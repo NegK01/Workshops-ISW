@@ -1,0 +1,95 @@
+body {
+    background: #202020;
+    color: aliceblue;
+}
+
+.container-fluid {
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.main__hero {
+    background-color: #202020 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 600px;
+    margin: 50px 0;
+}
+
+.main__hero-container {
+    padding-left: 40px;
+    padding-right: 15px;
+}
+
+.main__tecnologia {
+    margin: 50px 0;
+}
+
+.background {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    max-width: 1440px;
+    justify-self: center;
+}
+
+.main__sensor {
+    background-image: url("https://resource.logitechg.com/w_1800,h_1800,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/g305/g305-herofeature-1-desktop.png?v=1");
+    
+}
+
+.main__especificaciones {
+    background-image: url("https://resource.logitechg.com/w_1800,h_1800,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/g305/g305-herofeature-8.png?v=1");
+}
+
+.main__especificaciones::before {
+    content: "";
+    position: absolute;
+    background-color: #00000027;
+    z-index: 2;
+    inset: 0;
+    pointer-events: none;
+}
+
+.main__especificaciones > * {
+    position: relative;
+    z-index: 3;
+}
+
+.main__especificaciones-container {
+    height: 300px;
+}
+
+.main__sensor-container {
+    height: 300px;
+}
+
+.main__hero,
+.main__especificaciones,
+.main__tecnologia,
+.main__sensor,
+.main__imagenes {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: auto;
+}
+
+.btn {
+    background-color: #10a8d6;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #0d96c0;
+    border: none;
+}
+
+.btn:active {
+    background-color: #0a81a5 !important;
+    border: none;
+}
