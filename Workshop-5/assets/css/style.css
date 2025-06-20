@@ -1,0 +1,232 @@
+:root {
+    --bg: #202020;
+    --text: aliceblue;
+    --bg-button: #00bcd4;
+    --bg-button-hover: #00afc2;
+    --bg-button-active: #009cb0;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+#logo {
+    transition: transform 0.5s ease;
+}
+
+#logo:hover {
+    transform: scale(0.95) translateX(-15px);
+}
+
+img[alt] {
+    border: 1px solid rgba(68, 68, 68, 0.296);
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar-container {
+    justify-content: space-between;
+}
+
+.navbar__hamburger {
+    background-color: #202020;
+    border: none;
+    width: 43px;
+}
+
+.navbar__hamburger img {
+    width: 100%;
+}
+
+.navbar-brand {
+    width: 50%;
+}
+
+.navbar-brand img {
+    width: 100%;
+    max-width: 200px;
+}
+
+.container {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.main__hero {
+    background-color: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 600px;
+    margin: 50px 0;
+}
+
+.main__hero-left,
+.main__hero-right {
+    width: 100%;
+    justify-items: center;
+}
+
+.main__hero-left {
+    padding: 90px 15px 0 15px;
+}
+
+.main__hero-right img {
+    width: 100%;
+}
+
+.main__tecnologia {
+    margin: 50px 0;
+}
+
+.background {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    max-width: 1440px;
+    justify-self: center;
+}
+
+.main__sensor {
+    background-image: url("https://resource.logitechg.com/w_1800,h_1800,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/g305/g305-herofeature-1-desktop.png?v=1");
+    height: 325px;
+    width: 101%;
+}
+
+.main__especificaciones {
+    background-image: url("https://resource.logitechg.com/w_1800,h_1800,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/g305/g305-herofeature-8.png?v=1");
+    height: 325px;
+    width: 101%;
+}
+
+.main__especificaciones::before {
+    content: "";
+    position: absolute;
+    background-color: #0000005e;
+    z-index: 2;
+    inset: 0;
+    pointer-events: none;
+}
+
+.main__especificaciones > * {
+    position: relative;
+    z-index: 3;
+}
+
+.main__especificaciones-container {
+    height: 90%;
+    align-items: center;
+}
+
+.main__especificaciones-item-1,
+.main__especificaciones-item-2,
+.main__especificaciones-item-3 {
+    width: 100%;
+    text-align: center;
+}
+
+.main__tecnologia-container {
+    padding: 0 15px 0 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 0 200px 0 200px;
+}
+
+.main__sensor-container {
+    justify-content: right;
+    width: 100%;
+}
+
+.main__sensor-item {
+    text-align: center;
+    padding: 0 15px 0 15px;
+    width: 50%;
+}
+
+.main__imagenes {
+    text-align: center;
+}
+
+.main__imagenes-container {
+    flex-direction: row;
+}
+
+.main__imagenes-container img {
+    width: 100%;
+}
+
+.btn {
+    background-color: var(--bg-button);
+    color: inherit;
+    font-size: 1.1rem;
+    padding: 0 15px 0 15px;
+    height: 25px;
+    border: none;
+    width: auto;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: var(--bg-button-hover);
+    border: none;
+}
+
+.btn:active {
+    background-color: var(--bg-button-active);
+    border: none;
+}
+
+@media (max-width: 425px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .navbar-container {
+        flex-direction: row;
+    }
+
+    .main__hero-left {
+        padding: 0px 15px 0 15px;
+    }
+
+    .main__tecnologia-container {
+        padding: 0 20px 0 20px;
+    }
+
+    .main__especificaciones {
+        height: 400px;
+    }
+
+    .main__especificaciones-item-1,
+    .main__especificaciones-item-2,
+    .main__especificaciones-item-3 {
+        line-height: 0.6lh;
+    }
+
+    .main__sensor {
+        height: 400px;
+    }
+
+    .main__sensor-container {
+        padding-top: 3%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .main__sensor-item {
+        width: 100%;
+        height: 50%;
+    }
+}
