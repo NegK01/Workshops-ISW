@@ -18,6 +18,7 @@
             <tr>
                 <th>Id</th>
                 <th>Nombre</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -25,6 +26,7 @@
                 <tr>
                     <td><?= $carrera['id'] ?></td>
                     <td><?= $carrera['nombre'] ?></td>
+                    <td><a href="/carreras/editar/<?= $carrera['id'] ?>">Editar</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

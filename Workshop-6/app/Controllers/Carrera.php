@@ -24,6 +24,17 @@ class Carrera extends BaseController
         return view('carreras/crear');
     }
 
+    public function editar($id)
+    {
+        $data['carrera'] = $this->modelo->obtenerCarrera($id);
+
+        if (!$data['carrera']) {
+            return redirect()->to('carreras/index');
+        }
+
+        return view('carreras/editar', $data);
+    }
+
     public function guardar()
     {
         $datos = [
@@ -33,6 +44,19 @@ class Carrera extends BaseController
         $this->modelo->guardarCarrera($datos);
 
         // se redirecciona en lugar de crear la vista pues para usar la vista se requiere de los datos para construirse/renderizarse, en cambio redireccionar lo envia a esa url y el enrutador se encarga de utilizar el controlador y metodo correspondiente, así se cargan los datos nuevos y se evita que se duplique el registro si la página se refresca (post -> redirect -> get)
+        return redirect()->to('carreras/index');
+    }
+
+    public function actualizar()
+    {
+        $id = $this->request->getPost('id');
+
+        $datos = [
+            'nombre' => $this->request->getPost('nombre')
+        ];
+
+        $this->modelo->actualizarCarrera($id, $datos);
+
         return redirect()->to('carreras/index');
     }
 }

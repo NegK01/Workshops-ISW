@@ -24,4 +24,16 @@ class ModeloEstudiante extends Model
     {
         return $this->insert($data);
     }
+
+    public function obtenerEstudiante($id)
+    {
+        return $this->where('estudiantes.id', $id)
+            ->select('estudiantes.id, estudiantes.nombre, estudiantes.id_carrera')
+            ->first();
+    }
+
+    public function actualizarEstudiante($id, $data)
+    {
+        return $this->update($id, $data);
+    }
 }

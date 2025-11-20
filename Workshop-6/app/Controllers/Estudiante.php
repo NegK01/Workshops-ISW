@@ -28,6 +28,19 @@ class Estudiante extends BaseController
         return view('estudiantes/crear', $data);
     }
 
+    public function editar($id)
+    {
+        $data['estudiante'] = $this->modelo->obtenerEstudiante($id);
+
+        if (!$data['estudiante']) {
+            return redirect()->to('estudiantes/index');
+        }
+
+        $data['carreras'] = $this->modeloCarrera->obtenerCarreras();
+
+        return view('estudiantes/editar', $data);
+    }
+
     public function guardar()
     {
         $datos = [
@@ -38,6 +51,20 @@ class Estudiante extends BaseController
         $this->modelo->guardarEstudiante($datos);
 
         // se redirecciona en lugar de crear la vista: enviamos al listado de estudiantes (post -> redirect -> get)
+        return redirect()->to('estudiantes/index');
+    }
+
+    public function actualizar()
+    {
+        $id = $this->request->getPost('id');
+
+        $datos = [
+            'nombre' => $this->request->getPost('nombre'),
+            'id_carrera' => $this->request->getPost('id_carrera')
+        ];
+
+        $this->modelo->actualizarEstudiante($id, $datos);
+
         return redirect()->to('estudiantes/index');
     }
 }

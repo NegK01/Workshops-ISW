@@ -22,4 +22,14 @@ class ModeloCarrera extends Model
         return $this->insert($data);
     }
 
+    public function obtenerCarrera($id)
+    {
+        return $this->find($id);
+    }
+
+    public function actualizarCarrera($id, $data)
+    {
+        return $this->update($id, $data);
+    }
+
 }

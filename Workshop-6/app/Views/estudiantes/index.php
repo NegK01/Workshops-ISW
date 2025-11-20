@@ -19,6 +19,7 @@
                 <th>Id</th>
                 <th>Estudiante</th>
                 <th>Carrera</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -27,6 +28,7 @@
                     <td><?= $estudiante['id'] ?></td>
                     <td><?= $estudiante['nombre'] ?></td>
                     <td><?= $estudiante['nombre_carrera'] ?></td>
+                    <td><a href="/estudiantes/editar/<?= $estudiante['id'] ?>">Editar</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
